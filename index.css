@@ -1,0 +1,124 @@
+ @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(135deg, #ff99cc, #ff6699);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            animation: float 3s infinite;
+            opacity: 0.7;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 620px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 102, 153, 0.3);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            text-align: left;
+        }
+
+        .funny-button {
+            background: linear-gradient(45deg, #ff6f61, #ff4757);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .funny-button:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 111, 97, 0.6);
+        }
+
+        .no-button {
+            background: linear-gradient(45deg, #a4a4a4, #7a7a7a);
+            position: absolute;
+        }
+
+        .gif-container img {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gif-container img:hover {
+            transform: rotate(-2deg) scale(1.02);
+        }
+
+        .hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .visible {
+            display: block;
+            animation: appear 0.5s ease forwards;
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2, h3 {
+            color: #ff3366;
+            text-shadow: 2px 2px 4px rgba(255, 51, 102, 0.2);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255, 240, 240, 0.9);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateX(10px);
+        }
+            @media (min-width: 600px) {
+            .container {
+                max-width: 500px;
+            }
+
+            .button-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
