@@ -139,7 +139,14 @@
             document.getElementById("flowers").classList.remove("hidden");
         });
 
+
         document.getElementById("atLast").addEventListener("click", function() {
     document.getElementById("flowers").classList.add("hidden");
-    document.getElementById("finalPage2").classList.remove("hidden"); // Fixed ID
+    document.getElementById("travelPage").classList.remove("hidden"); // Fixed ID
+
+
+     document.getElementById("next").addEventListener("click", function() {
+            document.getElementById("travelPage").classList.add("hidden");
+            document.getElementById("finalPage2").classList.remove("hidden");
+        });
 });
