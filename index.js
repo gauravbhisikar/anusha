@@ -136,6 +136,11 @@
 
          document.getElementById("safeButton").addEventListener("click", function() {
             document.getElementById("seagullProtection").classList.add("hidden");
+            document.getElementById("whyDateMe").classList.remove("hidden");
+        });
+
+          document.getElementById("why-next").addEventListener("click", function() {
+            document.getElementById("whyDateMe").classList.add("hidden");
             document.getElementById("flowers").classList.remove("hidden");
         });
 
