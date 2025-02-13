@@ -66,7 +66,7 @@
 
         .no-button {
             background: linear-gradient(45deg, #a4a4a4, #7a7a7a);
-            position: absolute;
+            position: relative;
         }
 
         .gif-container img {
