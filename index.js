@@ -1,3 +1,44 @@
+window.addEventListener("load", function() {
+    let bgAudio = document.getElementById("bgAudio");
+
+    if (bgAudio) {
+        bgAudio.muted = true; // Start muted to allow autoplay
+        bgAudio.play().catch(error => console.log("Autoplay prevented:", error));
+    } else {
+        console.log("Audio element not found!");
+    }
+});
+
+// Unmute and play when the user clicks anywhere
+document.addEventListener("click", function() {
+    let bgAudio = document.getElementById("bgAudio");
+    if (bgAudio) {
+        bgAudio.muted = false; // Unmute
+        bgAudio.play();
+    }
+});
+document.addEventListener("click", function() {
+    let bgAudio = document.getElementById("bgAudio");
+    if (bgAudio) {
+        bgAudio.muted = false; // Unmute
+        bgAudio.play();
+    }
+});
+document.addEventListener("scroll", function() {
+    let bgAudio = document.getElementById("bgAudio");
+    if (bgAudio) {
+        bgAudio.muted = false; // Unmute
+        bgAudio.play();
+    }
+});
+document.addEventListener("keypress", function() {
+    let bgAudio = document.getElementById("bgAudio");
+    if (bgAudio) {
+        bgAudio.muted = false; // Unmute
+        bgAudio.play();
+    }
+});
+
  function createHearts() {
             const heartsContainer = document.getElementById('heartsContainer');
             for(let i = 0; i < 20; i++) {
@@ -82,10 +123,15 @@
         }
 
 
+
+
         // Update your event listeners to use showPage function
-        document.getElementById("startButton").addEventListener("click", function() {
-            showPage(document.getElementById("termsPopup"));
-        });
+       document.getElementById("startButton").addEventListener("click", function() {
+        showPage(document.getElementById("termsPopup"));
+    
+   
+});
+
         // ... update other event listeners similarly ...
         document.getElementById("startButton").addEventListener("click", function() {
             document.querySelector(".container").classList.add("hidden");
