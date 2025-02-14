@@ -12,6 +12,7 @@
 
         body {
             font-family: 'Comic Neue', cursive;
+            font-size: 2vh;
             background: linear-gradient(135deg, #ff99cc, #ff6699);
             min-height: 100vh;
             position: relative;
@@ -73,7 +74,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
-            width: 20vw;
+            width: 25vw;
 
         }
 
