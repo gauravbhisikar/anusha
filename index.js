@@ -198,6 +198,16 @@ document.addEventListener("keypress", function() {
 
      document.getElementById("next").addEventListener("click", function() {
             document.getElementById("travelPage").classList.add("hidden");
+            document.getElementById("valentineProposal").classList.remove("hidden");
+        });
+
+     document.getElementById("valentineYesButton").addEventListener("click", function() {
+            document.getElementById("valentineProposal").classList.add("hidden");
             document.getElementById("finalPage2").classList.remove("hidden");
+        });
+
+     document.getElementById("next2").addEventListener("click", function() {
+            document.getElementById("finalPage2").classList.add("hidden");
+            document.getElementById("finalPage3").classList.remove("hidden");
         });
 });
